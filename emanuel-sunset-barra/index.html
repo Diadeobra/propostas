@@ -73,8 +73,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 .page{position:relative;z-index:1;max-width:760px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:0 56px;overflow-x:clip}
 
-/* Barra de seções em vidro */
-.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;align-items:center;gap:6px;margin:10px -6px 0;padding:6px;border-radius:22px;background:rgba(34,20,21,.58);-webkit-backdrop-filter:blur(28px) saturate(170%);backdrop-filter:blur(28px) saturate(170%);box-shadow:0 20px 50px -20px rgba(0,0,0,.85),inset 0 1px 1px rgba(255,255,255,.18),inset 0 0 0 .5px rgba(255,255,255,.12)}
+/* Barra de seções (o vidro está no bloco Liquid Glass, no fim do CSS) */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;align-items:center;gap:6px;margin:10px -6px 0;padding:6px;border-radius:22px}
 .app-icon{--mg-d:#000;--mg-o:var(--cream);flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:11px;background:linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,0) 55%),var(--brand);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 6px 14px -6px rgba(221,0,0,.8)}
 .app-icon svg{width:auto;height:62%}
 .chips{flex:1;min-width:0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 22px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 22px),transparent)}
@@ -292,19 +292,19 @@ button{font:inherit;color:inherit;cursor:pointer}
 .condo.next::after{content:"";position:absolute;inset:-4px;border-radius:inherit;box-shadow:0 0 0 1.5px rgba(48,209,88,.5);opacity:0;pointer-events:none}
 
 /* Próximo passo */
-.cta{display:grid;gap:16px;padding:22px 18px 18px;border-radius:28px;background:rgba(34,20,21,.55);-webkit-backdrop-filter:blur(28px) saturate(170%);backdrop-filter:blur(28px) saturate(170%);box-shadow:0 30px 80px -24px rgba(0,0,0,.85),inset 0 1px 1px rgba(255,255,255,.2),inset 0 0 0 .5px rgba(255,255,255,.12)}
+.cta{display:grid;gap:16px;padding:22px 18px 18px;border-radius:28px}
 .cta h2{font-size:clamp(26px,6.4vw,32px);line-height:1.12;font-weight:750;letter-spacing:-.022em}
 .cta p{color:var(--label-2)}
 .topics{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .topics li{display:flex;align-items:center;gap:10px;font-size:15.5px}
 .topics .i{color:var(--tint)}
-.primary{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;font-size:17px;font-weight:600;letter-spacing:-.01em;color:#fff;text-decoration:none;background:var(--brand) linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,0) 58%);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -1px 0 rgba(0,0,0,.14),0 12px 26px -12px rgba(221,0,0,.9);transition:transform .3s var(--spring),filter .2s}
+.primary{position:relative;overflow:hidden;isolation:isolate;display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;font-size:17px;font-weight:600;letter-spacing:-.01em;color:#fff;text-decoration:none;background:var(--brand) linear-gradient(180deg,rgba(255,255,255,.24),rgba(255,255,255,0) 58%);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -1px 0 rgba(0,0,0,.14),0 12px 26px -12px rgba(221,0,0,.9)}
 .primary::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:linear-gradient(100deg,rgba(255,255,255,0) 35%,rgba(255,255,255,.32) 50%,rgba(255,255,255,0) 65%) 100% 0/250% 100% no-repeat;pointer-events:none}
 .primary:active{transform:scale(.97);filter:brightness(.94)}
 .primary .i{width:22px;height:22px}
 .contact{border-radius:20px;background:rgba(0,0,0,.25);box-shadow:none}
 .contact .row{min-height:66px}
-.copy{flex:none;display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;color:var(--tint);background:rgba(255,69,58,.14);transition:transform .25s var(--spring)}
+.copy{flex:none;display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:50%;color:var(--tint);background:rgba(255,69,58,.14)}
 .copy:active{transform:scale(.9)}
 .copy .i{width:18px;height:18px}
 #c-phone,#c-mail{text-decoration:none}
@@ -318,7 +318,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .foot .wordmark{--wm-dia:var(--cream);--wm-obra:var(--cream);display:block;width:110px;height:auto;aspect-ratio:2000/1073;opacity:.85}
 .foot p{max-width:48ch;font-size:12.5px;line-height:1.5;color:var(--label-3)}
 
-.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);z-index:30;padding:11px 18px;border-radius:999px;font-size:14.5px;font-weight:600;color:var(--label);background:rgba(40,26,27,.8);-webkit-backdrop-filter:blur(24px) saturate(170%);backdrop-filter:blur(24px) saturate(170%);box-shadow:0 18px 40px -16px rgba(0,0,0,.9),inset 0 0 0 .5px rgba(255,255,255,.16);transform:translate(-50%,160%);transition:transform .45s var(--spring);pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);z-index:30;padding:11px 18px;border-radius:999px;font-size:14.5px;font-weight:600;color:var(--label);transform:translate(-50%,160%);pointer-events:none;max-width:calc(100% - 32px);text-align:center}
 .toast.is-on{transform:translate(-50%,0)}
 
 @media(max-width:420px){
@@ -357,6 +357,65 @@ button{font:inherit;color:inherit;cursor:pointer}
 @keyframes flow{from{background-position:0 100%,0 0}to{background-position:0 0,0 0}}
 @keyframes double-breathe{to{fill:rgba(255,69,58,.4)}}
 @keyframes ring{0%{opacity:.9;transform:scale(.96)}100%{opacity:0;transform:scale(1.12)}}
+/* ==== Vidro Liquid Glass · padrão Dia de Obra v2 (idêntico em todas as propostas) ====
+   Regra da Apple: vidro só na camada que flutua sobre o conteúdo (barras, controles de barra,
+   avisos, menus). Conteúdo e fundo ficam opacos. Nunca vidro sobre vidro.
+   Variantes (como o glassEffectStyle do expo-glass-effect):
+   .glass         = "regular": tom escuro, para o fundo da página.
+   .glass--clear  = "clear": menos tom e mais brilho, para quando a barra passa sobre foto ou planta.
+   O movimento fica todo no script "Mola física" (sem transição por tempo, só troca de cor). */
+:root{
+  --glass-bg:rgba(30,18,19,.76);
+  --glass-sheen:linear-gradient(180deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.03) 42%,rgba(255,255,255,0) 100%);
+  --glass-blur:blur(24px) saturate(180%);
+  --glass-edge:inset 0 1px 0 rgba(255,255,255,.24),inset 0 0 0 .5px rgba(255,255,255,.16),inset 0 -1px 0 rgba(0,0,0,.18);
+  --glass-shadow:0 12px 32px -12px rgba(0,0,0,.7),0 2px 6px rgba(0,0,0,.22);
+  --glass-solid:rgb(36,22,23);
+  --glass-label:var(--label);
+  --glass-label-2:rgba(245,245,247,.86);
+  --glass-fill:rgba(255,255,255,.14);
+  --glass-hover:rgba(255,255,255,.09);
+  --glass-pad:6px;
+  --glass-item:40px;
+}
+.glass{background-color:var(--glass-bg);background-image:var(--glass-sheen);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);box-shadow:var(--glass-edge),var(--glass-shadow);transition:background-color .3s,color .3s}
+.glass--clear{
+  --glass-bg:rgba(255,255,255,.30);
+  --glass-sheen:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.14) 45%,rgba(255,255,255,0) 100%);
+  --glass-blur:blur(24px) saturate(180%) brightness(1.06);
+  --glass-edge:inset 0 1px 0 rgba(255,255,255,.75),inset 0 0 0 .5px rgba(255,255,255,.6),inset 0 -1px 0 rgba(0,0,0,.08);
+  --glass-label:#171815;
+  --glass-label-2:rgba(23,24,21,.8);
+  --glass-fill:rgba(23,24,21,.08);
+  --glass-hover:rgba(23,24,21,.06);
+}
+/* Barra em cápsula; itens internos concêntricos (raio externo = raio interno + respiro) */
+.topbar{padding:var(--glass-pad);border-radius:calc(var(--glass-item) / 2 + var(--glass-pad))}
+.topbar .app-icon,.chips a{border-radius:calc(var(--glass-item) / 2)}
+/* Itens dentro do vidro: sem segundo vidro, só preenchimento leve */
+.chips a{color:var(--glass-label-2)}
+.chips a[aria-current=true]{color:var(--glass-label);background:var(--glass-fill);box-shadow:inset 0 .5px 0 rgba(255,255,255,.22)}
+@media(hover:hover){.chips a:hover{color:var(--glass-label);background:var(--glass-hover)}}
+.chips a:focus-visible{outline:2px solid var(--glass-label);outline-offset:-2px}
+/* Gota: indicador único da seção ativa, que estica e se funde ao deslizar (desenhada pela mola) */
+.chip-indicator{display:none}
+.spring-on .chips{position:relative}
+.spring-on .chips a{position:relative;z-index:1;isolation:isolate}
+.spring-on .chips a[aria-current=true]{background:transparent;box-shadow:none}
+.spring-on .chip-indicator{display:block;position:absolute;left:0;top:0;bottom:0;width:0;border-radius:calc(var(--glass-item) / 2);background-color:var(--glass-fill);background-image:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0) 60%);box-shadow:inset 0 .5px 0 rgba(255,255,255,.24);pointer-events:none;transform-origin:50% 50%;will-change:transform,width;transition:background-color .3s}
+/* Toque interativo (isInteractive): brilho que segue o dedo + leve aumento pela mola */
+.spring-on .copy{position:relative;isolation:isolate}
+.spring-on .chips a::before,.spring-on .copy::before,.spring-on .primary::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;opacity:var(--gp,0);background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.45),rgba(255,255,255,0) 70%)}
+.spring-on .copy:active,.spring-on .primary:active,.spring-on .plan-photo:active img{transform:none;filter:none}
+/* Sem o script: estados imediatos, sem animação */
+html:not(.spring-on) .chips a:active{background:rgba(255,255,255,.2)}
+/* Conteúdo: sem vidro. O "Próximo passo" é um cartão sólido como os demais */
+.cta{background:var(--card);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:var(--card-edge)}
+/* isLiquidGlassAvailable: sem desfoque no navegador ou com "reduzir transparência", o vidro vira sólido */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass{background-color:var(--glass-solid);background-image:none}}
+@media(prefers-reduced-transparency:reduce){.glass{background-color:var(--glass-solid);background-image:none;-webkit-backdrop-filter:none;backdrop-filter:none}}
+@media(prefers-contrast:more){:root{--glass-bg:rgba(24,14,15,.9);--glass-label-2:var(--label);--glass-edge:inset 0 0 0 1px rgba(255,255,255,.55)}}
+/* ==== fim do vidro ==== */
 </style>
 </head>
 <body>
@@ -407,7 +466,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 <div class="wallpaper" aria-hidden="true"><span class="glow glow-a"></span><span class="glow glow-c"></span></div>
 
 <div class="page">
-  <nav class="topbar" aria-label="Seções">
+  <nav class="topbar glass" aria-label="Seções">
     <span class="app-icon" aria-hidden="true"><svg viewBox="326 122 1348 1623"><use href="#monogram"/></svg></span>
     <div class="chips" id="chips">
       <a href="#resumo">Resumo</a>
@@ -801,7 +860,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   </footer>
 </div>
 
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="toast glass" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 (function(){
@@ -836,6 +895,153 @@ button{font:inherit;color:inherit;cursor:pointer}
     links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1));if(s)io.observe(s)});
   }
 })();
+</script>
+<script>
+/* ==== Mola física · padrão Dia de Obra v2 (idêntico em todas as propostas) ====
+   Todo movimento é por mola, não por tempo. Parâmetros no estilo da Apple (SwiftUI .spring):
+   response = período da oscilação em segundos; dampingFraction = amortecimento (1 = sem quique).
+   Conversão (massa 1): rigidez = (2π / response)²; amortecimento = 4π · dampingFraction / response.
+   A mola guarda posição e velocidade: um novo alvo no meio do movimento continua dali, sem reiniciar.
+   Com "reduzir movimento" o valor vai direto ao final. Se algo falhar, a página segue sem animação.
+   Comportamentos do expo-glass-effect refeitos aqui: variante clear automática, gota que se funde
+   (GlassContainer), toque interativo (isInteractive) e vidro que aparece/some (none → glass). */
+(function(){
+  var MOLA={
+    toque:{response:.3,dampingFraction:.7},      /* pressão nos botões e na gota */
+    chip:{response:.4,dampingFraction:.8},       /* gota da barra e rolagem dos chips */
+    gotaFrente:{response:.32,dampingFraction:.8},/* borda da gota que vai na frente (0,4 − 20%) */
+    gotaTras:{response:.48,dampingFraction:.8},  /* borda que fica para trás (0,4 + 20%): estica e se funde */
+    aviso:{response:.5,dampingFraction:.75}      /* aviso entrando e saindo */
+  };
+  var d=document,w=window,root=d.documentElement,ind=null,topbar=null;
+  try{
+    if(!w.requestAnimationFrame||!d.querySelector)return;
+    root.classList.add('spring-on'); /* antes de medir: a gota mede a partir da faixa de chips */
+    var mm=function(q){return w.matchMedia?w.matchMedia(q):{matches:false}};
+    var calmo=mm('(prefers-reduced-motion: reduce)');
+    var semTransp=mm('(prefers-reduced-transparency: reduce)'),maisContraste=mm('(prefers-contrast: more)');
+    var temVidro=!!(w.CSS&&CSS.supports&&(CSS.supports('backdrop-filter','blur(1px)')||CSS.supports('-webkit-backdrop-filter','blur(1px)')));
+    var vidroAtivo=function(){return temVidro&&!semTransp.matches}; /* isLiquidGlassAvailable */
+    var limita=function(v,a,b){return Math.max(a,Math.min(b,v))};
+
+    function Mola(p,valor,desenha,eps){this.ajusta(p);this.x=valor;this.v=0;this.alvo=valor;this.desenha=desenha;this.eps=eps||.001;this.raf=0;this.t0=0}
+    Mola.prototype.ajusta=function(p){this.k=Math.pow(2*Math.PI/p.response,2);this.c=4*Math.PI*p.dampingFraction/p.response};
+    Mola.prototype.pula=function(a){this.alvo=this.x=a;this.v=0;if(this.raf){cancelAnimationFrame(this.raf);this.raf=0}this.desenha(a,true)};
+    Mola.prototype.vai=function(a){
+      var m=this;m.alvo=a;
+      if(calmo.matches){m.pula(a);return}
+      if(m.raf)return;
+      m.t0=0;
+      m.raf=requestAnimationFrame(function passo(agora){
+        var dt=m.t0?Math.min((agora-m.t0)/1000,1/30):1/60,n=Math.max(1,Math.ceil(dt*240)),h=dt/n;m.t0=agora;
+        for(var i=0;i<n;i++){m.v+=(-m.k*(m.x-m.alvo)-m.c*m.v)*h;m.x+=m.v*h}
+        if(Math.abs(m.x-m.alvo)<m.eps&&Math.abs(m.v)<m.eps*10){m.x=m.alvo;m.v=0;m.raf=0;m.desenha(m.x,true);return}
+        m.desenha(m.x,false);m.raf=requestAnimationFrame(passo);
+      });
+    };
+
+    /* 1. Gota (GlassContainer): duas bordas com molas diferentes. A da frente sai antes e a de trás
+          demora, então a gota estica, se solta do chip de origem e se funde no de destino. */
+    var chips=d.querySelector('.chips'),apertoGota=0,desenhaGota=function(){};
+    if(chips&&w.MutationObserver){
+      ind=d.createElement('span');ind.className='chip-indicator';ind.setAttribute('aria-hidden','true');
+      chips.insertBefore(ind,chips.firstChild);
+      var largAlvo=0,visto=false;
+      desenhaGota=function(){
+        var L=eL.x,R=eR.x,larg=Math.max(0,R-L),estica=Math.max(0,larg-largAlvo);
+        var sy=1-Math.min(.18,estica/Math.max(largAlvo,1)*.22),s=1+.06*apertoGota;
+        ind.style.width=larg.toFixed(2)+'px';
+        ind.style.transform='translateX('+L.toFixed(2)+'px) scale('+s.toFixed(4)+','+(sy*s).toFixed(4)+')';
+      };
+      var eL=new Mola(MOLA.chip,0,desenhaGota,.1),eR=new Mola(MOLA.chip,0,desenhaGota,.1);
+      var ativo=function(){return chips.querySelector('a[aria-current=true]')};
+      var posiciona=function(anima){
+        var a=ativo();
+        if(!a){ind.style.opacity='0';visto=false;return}
+        ind.style.opacity='';
+        var nl=a.offsetLeft,nr=nl+a.offsetWidth;largAlvo=a.offsetWidth;
+        if(anima&&visto){
+          var praDireita=nl>eL.x;
+          (praDireita?eR:eL).ajusta(MOLA.gotaFrente);(praDireita?eL:eR).ajusta(MOLA.gotaTras);
+          eL.vai(nl);eR.vai(nr);
+        }else{eL.pula(nl);eR.pula(nr);visto=true}
+      };
+      new MutationObserver(function(){posiciona(true)}).observe(chips,{subtree:true,attributes:true,attributeFilter:['aria-current']});
+      w.addEventListener('resize',function(){posiciona(false)});
+      /* Rolagem horizontal dos chips até a seção ativa também por mola */
+      var ms=new Mola(MOLA.chip,chips.scrollLeft,function(x){chips.scrollLeft=x},.5);
+      chips.scrollTo=function(o){
+        var a=ativo(),max=chips.scrollWidth-chips.clientWidth;
+        var alvo=a?a.offsetLeft-(chips.clientWidth-a.offsetWidth)/2:(o&&o.left)||0;
+        if(!ms.raf){ms.x=chips.scrollLeft;ms.v=0}
+        ms.vai(limita(alvo,0,max));
+      };
+      posiciona(false);
+    }
+
+    /* 2. Toque interativo (isInteractive): brilho na posição do dedo + leve aumento com quique ao soltar */
+    [['.chips a',.06,.12,1],['.copy',.08,.12,1],['.primary',.03,.1,1],['.plan-photo',-.01,0,0,'img']].forEach(function(cfg){
+      d.querySelectorAll(cfg[0]).forEach(function(el){
+        var alvoEl=cfg[4]?el.querySelector(cfg[4]):el;if(!alvoEl)return;
+        var m=new Mola(MOLA.toque,0,function(p,fim){
+          if(el.getAttribute('aria-current')==='true'){apertoGota=p;desenhaGota()}
+          if(fim&&p===0){alvoEl.style.transform='';alvoEl.style.filter='';el.style.removeProperty('--gp');return}
+          alvoEl.style.transform='scale('+(1+cfg[1]*p).toFixed(4)+')';
+          if(cfg[2])alvoEl.style.filter='brightness('+(1+cfg[2]*p).toFixed(4)+')';
+          if(cfg[3])el.style.setProperty('--gp',limita(p,0,1).toFixed(3));
+        });
+        var segue=function(e){var r=el.getBoundingClientRect();el.style.setProperty('--gx',(e.clientX-r.left).toFixed(1)+'px');el.style.setProperty('--gy',(e.clientY-r.top).toFixed(1)+'px')};
+        el.addEventListener('pointerdown',function(e){segue(e);m.vai(1)});
+        el.addEventListener('pointermove',function(e){if(m.alvo===1)segue(e)});
+        ['pointerup','pointercancel','pointerleave'].forEach(function(t){el.addEventListener(t,function(){m.vai(0)})});
+      });
+    });
+
+    /* 3. Aviso: o vidro aparece e some (none → glass). Desfoque, opacidade e posição sobem juntos na mesma mola */
+    var toast=d.querySelector('.toast');
+    if(toast&&w.MutationObserver){
+      var mt=new Mola(MOLA.aviso,0,function(p,fim){
+        var q=limita(p,0,1);
+        toast.style.transform='translate(-50%,'+((1-p)*160).toFixed(2)+'%)';
+        toast.style.opacity=fim&&p===1?'':q.toFixed(3);
+        if(vidroAtivo()){
+          var f=fim&&p===1?'':'blur('+(24*q).toFixed(1)+'px) saturate('+(1+.8*q).toFixed(3)+')';
+          toast.style.backdropFilter=f;toast.style.webkitBackdropFilter=f;
+        }
+      });
+      mt.pula(toast.classList.contains('is-on')?1:0);
+      new MutationObserver(function(){mt.vai(toast.classList.contains('is-on')?1:0)}).observe(toast,{attributes:true,attributeFilter:['class']});
+    }
+
+    /* 4. Variante clear automática: só quando a foto/planta cobre a barra inteira (assim o texto escuro
+          fica sempre sobre fundo claro e o contraste AA se mantém). O IntersectionObserver liga a checagem
+          só quando a imagem está perto do topo. */
+    topbar=d.querySelector('.topbar.glass');
+    var fotos=d.querySelectorAll('.plan-photo,[data-glass-clear]');
+    if(topbar&&fotos.length&&w.IntersectionObserver){
+      var perto=0,agendado=0;
+      var confere=function(){
+        agendado=0;
+        var clear=false;
+        if(perto&&vidroAtivo()&&!maisContraste.matches){
+          /* a imagem precisa cobrir a altura da barra e a faixa de texto dos chips (os últimos 24 px já somem no esmaecido) */
+          var b=topbar.getBoundingClientRect(),t=(chips||topbar).getBoundingClientRect();
+          for(var i=0;i<fotos.length&&!clear;i++){var r=fotos[i].getBoundingClientRect();clear=r.top<=b.top&&r.bottom>=b.bottom&&r.left<=t.left&&r.right>=t.right-24}
+        }
+        topbar.classList.toggle('glass--clear',clear);
+      };
+      var agenda=function(){if(!agendado)agendado=requestAnimationFrame(confere)};
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.__perto=e.isIntersecting});perto=[].some.call(fotos,function(f){return f.__perto})?1:0;agenda()},{rootMargin:'0px 0px -70% 0px'});
+      for(var i=0;i<fotos.length;i++)io.observe(fotos[i]);
+      w.addEventListener('scroll',agenda,{passive:true});w.addEventListener('resize',agenda);
+    }
+  }catch(e){
+    root.classList.remove('spring-on');
+    if(ind&&ind.parentNode)ind.parentNode.removeChild(ind);
+    if(topbar)topbar.classList.remove('glass--clear');
+  }
+})();
+/* ==== fim da mola ==== */
 </script>
 </body>
 </html>
